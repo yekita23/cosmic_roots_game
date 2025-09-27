@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://dl1fugl5lffb1"]
+
+[ext_resource type="Script" uid="uid://cjrw58cxdca2x" path="res://InventoryBar/inventory_bar.gd" id="1_sxcec"]
+[ext_resource type="Texture2D" uid="uid://c0bsk08pj1xad" path="res://InventoryBar/Assets/ChatGPT Image 24 Eyl 2025 18_19_26.png" id="2_bgq8x"]
+[ext_resource type="Script" uid="uid://b7xfd1fa53108" path="res://InventoryBar/slot_1.gd" id="3_k13nl"]
+[ext_resource type="Texture2D" uid="uid://bsuv33upe07l0" path="res://InventoryBar/Assets/ChatGPT Image 24 Eyl 2025 18_21_27.png" id="4_qgikr"]
+[ext_resource type="Script" uid="uid://bseewyev1rqtl" path="res://InventoryBar/slot_2.gd" id="5_od1l6"]
+[ext_resource type="Script" uid="uid://b0fjvldffopxe" path="res://InventoryBar/slot_3.gd" id="6_7yg2j"]
+[ext_resource type="Texture2D" uid="uid://dvrs4pb6j1f8e" path="res://InventoryBar/Assets/ChatGPT Image 27 Eyl 2025 09_08_26.png" id="6_k13nl"]
+[ext_resource type="Script" uid="uid://c2b06xgy0o3em" path="res://InventoryBar/slot_4.gd" id="7_lfpa5"]
+[ext_resource type="Script" uid="uid://buyo4og7bkuno" path="res://InventoryBar/slot_5.gd" id="8_d1iti"]
+[ext_resource type="Texture2D" uid="uid://30ywx81qmatw" path="res://InventoryBar/Assets/ChatGPT Image 27 Eyl 2025 09_10_05.png" id="8_qgikr"]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="InventoryBar" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 13262.0
+offset_bottom = 3468.0
+script = ExtResource("1_sxcec")
+
+[node name="Slot1" type="TextureRect" parent="InventoryBar"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 596.0
+offset_right = 1033.01
+offset_bottom = 1620.0
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_bgq8x")
+script = ExtResource("3_k13nl")
+item_name = "sickle"
+
+[node name="Slot2" type="TextureRect" parent="InventoryBar"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 596.0
+offset_right = 1089.0
+offset_bottom = 1620.0
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_qgikr")
+script = ExtResource("5_od1l6")
+slot_index = 2
+item_name = "watering_can"
+
+[node name="Slot3" type="TextureRect" parent="InventoryBar"]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 596.0
+offset_right = 1145.0
+offset_bottom = 1620.0
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("6_k13nl")
+script = ExtResource("6_7yg2j")
+slot_index = 3
+item_name = "hoe"
+
+[node name="Slot4" type="TextureRect" parent="InventoryBar"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 596.0
+offset_right = 1202.0
+offset_bottom = 1620.0
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("8_qgikr")
+script = ExtResource("7_lfpa5")
+slot_index = 4
+item_name = "seed"
+
+[node name="Slot5" type="TextureRect" parent="InventoryBar"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("8_d1iti")
+slot_index = 5

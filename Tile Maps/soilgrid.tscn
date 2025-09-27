@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://jq7bw60tor5t"]
+
+[ext_resource type="Script" uid="uid://irt8kp1wsl0" path="res://Tile Maps/soil.gd" id="1_50x0w"]
+[ext_resource type="Texture2D" uid="uid://c8hi4o00q418v" path="res://soils/grown.png" id="2_v74wh"]
+[ext_resource type="TileSet" uid="uid://bwak5th7rlmn1" path="res://soils/SoilTileset.tres" id="3_etkux"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_50x0w"]
+
+[node name="SoilGrid" type="Node2D" groups=["soil"]]
+
+[node name="Soil" type="Area2D" parent="."]
+script = ExtResource("1_50x0w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Soil"]
+shape = SubResource("RectangleShape2D_50x0w")
+
+[node name="Sprite2D" type="Sprite2D" parent="Soil"]
+z_index = -1
+position = Vector2(529, 326.188)
+scale = Vector2(1.34722, 2.2725)
+texture = ExtResource("2_v74wh")
+
+[node name="GrowTimer" type="Timer" parent="Soil"]
+one_shot = true
+
+[node name="SoilTileMap" type="TileMap" parent="Soil"]
+z_index = -1
+tile_set = ExtResource("3_etkux")
+format = 2
+layer_0/tile_data = PackedInt32Array(1179682, 0, 0, 1245217, 0, 0, 1114145, 0, 0, 1179681, 0, 0, 1310753, 0, 0, 1310754, 0, 0, 1310755, 0, 0, 1310756, 0, 0, 1310757, 0, 0, 1245221, 0, 0, 1179685, 0, 0, 1114149, 0, 0, 1114150, 0, 0, 1179686, 0, 0, 1245222, 0, 0, 1310758, 0, 0, 1245220, 0, 0, 1179684, 0, 0, 1114148, 0, 0, 1114147, 0, 0, 1114146, 0, 0, 1245218, 0, 0, 1245219, 0, 0, 1179683, 0, 0, 1114144, 0, 0, 1114143, 0, 0, 1114142, 0, 0, 1114141, 0, 0, 1114140, 0, 0, 1114139, 0, 0, 1179675, 0, 0, 1245211, 0, 0, 1310747, 0, 0, 1376283, 0, 0, 1441819, 0, 0, 1507355, 0, 0, 1507356, 0, 0, 1507357, 0, 0, 1507358, 0, 0, 1507359, 0, 0, 1507360, 0, 0, 1507361, 0, 0, 1507362, 0, 0, 1507363, 0, 0, 1507364, 0, 0, 1441828, 0, 0, 1441829, 0, 0, 1441830, 0, 0, 1507366, 0, 0, 1507365, 0, 0, 1376293, 0, 0, 1376294, 0, 0, 1376292, 0, 0, 1376291, 0, 0, 1376290, 0, 0, 1376289, 0, 0, 1441827, 0, 0, 1441826, 0, 0, 1441825, 0, 0, 1441824, 0, 0, 1376288, 0, 0, 1376287, 0, 0, 1310751, 0, 0, 1245215, 0, 0, 1179679, 0, 0, 1179680, 0, 0, 1310752, 0, 0, 1245216, 0, 0, 1441823, 0, 0, 1376286, 0, 0, 1310750, 0, 0, 1245214, 0, 0, 1179678, 0, 0, 1179677, 0, 0, 1179676, 0, 0, 1245212, 0, 0, 1245213, 0, 0, 1310749, 0, 0, 1376285, 0, 0, 1376284, 0, 0, 1310748, 0, 0, 1441820, 0, 0, 1441821, 0, 0, 1441822, 0, 0)
+
+[connection signal="timeout" from="Soil/GrowTimer" to="Soil" method="_on_grow_timer_timeout"]
