@@ -26,6 +26,8 @@ func get_active_item():
 
 
 
+
+
 func _process(delta):
 	if Input.is_action_just_pressed("ui_select_1"):
 		selected_tool = inventory[0]
@@ -48,8 +50,12 @@ func _process(delta):
 	
 	pass
 
+
+
+
 func interact_with_soil():
 	var soil = get_overlapping_soil()
+	
 	if soil:
 		soil.interact_with_soil(selected_tool)
 

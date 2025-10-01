@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cw2fgri3yuy2w"
-path="res://.godot/imported/indir (2).jpg-8aa0ebdb11313527b76240136833637a.ctex"
+uid="uid://bxojk5jxnyj06"
+path="res://.godot/imported/Ekran görüntüsü 2025-09-29 211355.png-0a222683fdbff0f813f52c04f22ab5f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tile Maps/Sprites/indir (2).jpg"
-dest_files=["res://.godot/imported/indir (2).jpg-8aa0ebdb11313527b76240136833637a.ctex"]
+source_file="res://soils/Ekran görüntüsü 2025-09-29 211355.png"
+dest_files=["res://.godot/imported/Ekran görüntüsü 2025-09-29 211355.png-0a222683fdbff0f813f52c04f22ab5f1.ctex"]
 
 [params]
 
